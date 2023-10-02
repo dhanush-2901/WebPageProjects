@@ -1,0 +1,11 @@
+#div1{
+    text-align: center;
+}
+*{
+    background-color: lightsteelblue;
+}
+#addbtn{
+    color: purple;
+    background-color: chocolate;
+    border-radius: 10px;
+}
