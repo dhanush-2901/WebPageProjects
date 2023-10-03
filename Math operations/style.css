@@ -4,7 +4,7 @@
 *{
     background-color: lightsteelblue;
 }
-#addbtn{
+.btn{
     color: purple;
     background-color: chocolate;
     border-radius: 10px;

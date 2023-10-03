@@ -2,6 +2,9 @@ const num1Input = document.getElementById("num1");
 const num2Input = document.getElementById("num2");
 const addButton = document.getElementById("addbtn");
 const resultEle = document.getElementById("result");
+const subButton = document.getElementById("subbtn");
+const mulButton = document.getElementById("mulbtn");
+const divButton = document.getElementById("divbtn");
 
 addButton.onclick = function(){
     const num1 = parseFloat(num1Input.value);
@@ -13,5 +16,43 @@ addButton.onclick = function(){
     }
     else{
         resultEle.innerHTML = "Please Enter valid number";
+    }
+}
+
+subButton.onclick = function(){
+    const num1 = parseFloat(num1Input.value);
+    const num2 = parseFloat(num2Input.value);
+
+    if(!isNaN(num1) && !isNaN(num2)){
+        const sum = num1 - num2;
+        resultEle.innerHTML = `Result: ${sum}`;
+    }
+    else{
+        resultEle.innerHTML = "Please Enter valid number";
+    }
+}
+
+mulButton.onclick = function(){
+    const num1 = parseFloat(num1Input.value);
+    const num2 = parseFloat(num2Input.value);
+
+    if(!isNaN(num1) && !isNaN(num2)){
+        const sum = num1 * num2;
+        resultEle.innerHTML = `Result: ${sum}`;
+    }
+    else{
+        resultEle.innerHTML = "Please Enter valid number";
+    }
+}
+divButton.onclick = function(){
+    const num1 = parseFloat(num1Input.value);
+    const num2 = parseFloat(num2Input.value);
+
+    if(!isNaN(num1) && !isNaN(num2)){
+        const sum = num1 / num2;
+        resultEle.innerHTML = `Result: ${sum}`;
+    }
+    else{
+        resultEle.innerHTML = "Please Enter  valid number";
     }
 }
