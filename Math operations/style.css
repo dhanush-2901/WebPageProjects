@@ -8,4 +8,16 @@
     color: purple;
     background-color: chocolate;
     border-radius: 10px;
+    font-family: cursive;
+    cursor: pointer;
+}
+label{
+    font-family: cursive;
+}
+p{
+    font-family: cursive;
+    font-size: 25px;
+    color: green;
+    text-shadow: 0 0 15px black;
+    font-weight: 2rem;
 }

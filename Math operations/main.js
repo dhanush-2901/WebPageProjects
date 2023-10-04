@@ -5,6 +5,7 @@ const resultEle = document.getElementById("result");
 const subButton = document.getElementById("subbtn");
 const mulButton = document.getElementById("mulbtn");
 const divButton = document.getElementById("divbtn");
+const modButton = document.getElementById("modbtn");
 
 addButton.onclick = function(){
     const num1 = parseFloat(num1Input.value);
@@ -53,6 +54,18 @@ divButton.onclick = function(){
         resultEle.innerHTML = `Result: ${sum}`;
     }
     else{
-        resultEle.innerHTML = "Please Enter  valid number";
+        resultEle.innerHTML = "Please Enter valid number";
+    }
+}
+modButton.onclick = function(){
+    const num1 = parseFloat(num1Input.value);
+    const num2 = parseFloat(num2Input.value);
+
+    if(!isNaN(num1) && !isNaN(num2)){
+        const sum = num1 % num2;
+        resultEle.innerHTML = `Result: ${sum}`;
+    }
+    else{
+        resultEle.innerHTML = "Please Enter valid number";
     }
 }
