@@ -1,11 +1,15 @@
 const num1Input = document.getElementById("num1");
 const num2Input = document.getElementById("num2");
 const addButton = document.getElementById("addbtn");
-const resultEle = document.getElementById("result");
+const resultEle = document.getElementById("result1");
 const subButton = document.getElementById("subbtn");
 const mulButton = document.getElementById("mulbtn");
 const divButton = document.getElementById("divbtn");
 const modButton = document.getElementById("modbtn");
+const number1 = document.getElementById("number1");
+const number2 = document.getElementById("number2");
+const powResult = document.getElementById("result2");
+const powButton = document.getElementById("powbtn")
 
 addButton.onclick = function(){
     const num1 = parseFloat(num1Input.value);
@@ -67,5 +71,17 @@ modButton.onclick = function(){
     }
     else{
         resultEle.innerHTML = "Please Enter valid number";
+    }
+}
+powButton.onclick = function(){
+    const numb1 = parseFloat(number1.value);
+    const numb2 = parseFloat(number2.value);
+
+    if(!isNaN(numb1) && !isNaN(numb2)){
+        const sum = Math.pow(numb1, numb2);
+        powResult.innerHTML = `Result: ${sum}`;
+    }
+    else{
+        powResult.innerHTML = "Please Enter valid number";
     }
 }
