@@ -9,7 +9,11 @@ const modButton = document.getElementById("modbtn");
 const number1 = document.getElementById("number1");
 const number2 = document.getElementById("number2");
 const powResult = document.getElementById("result2");
-const powButton = document.getElementById("powbtn")
+const powButton = document.getElementById("powbtn");
+const radius = document.getElementById("radi");
+const resultAre = document.getElementById("result3");
+const areaButton = document.getElementById("arebtn");
+
 
 addButton.onclick = function(){
     const num1 = parseFloat(num1Input.value);
@@ -83,5 +87,17 @@ powButton.onclick = function(){
     }
     else{
         powResult.innerHTML = "Please Enter valid number";
+    }
+}
+areaButton.onclick = function(){
+    const rad = parseFloat(radius.value);
+
+    if(!isNaN(rad)){
+        const sum = Math.PI * (rad * rad)
+        const num = sum.toFixed(2);
+        resultAre.innerHTML = `Result: ${num}`;
+    }
+    else{
+        resultAre.innerHTML = "Please Enter valid number";
     }
 }
